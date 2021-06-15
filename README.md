@@ -80,8 +80,8 @@ log({
   collapseGroupLogs: 1
 })
 ```
-Those example produce the following results:
-![Examples results!](/images/examples.png)
+Those example produce the following output:
+![Examples output!](/images/examples.png)
 
 <br><br>
 "Ok now... that looks a bit messy" :) don't worry, find below a more informations.
