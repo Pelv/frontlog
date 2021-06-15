@@ -137,5 +137,5 @@ If is a string it will just send a normal console.log, If is an array will consi
 
 ## Outro
 That's all folks! :)
-Please feel free to fork, request improvements, stars and whatever.
+Please feel free to fork, request improvements, stars or whatever.
 If you have any questions, find me on any social and messaging App (search for Pelv or Pelviero).
