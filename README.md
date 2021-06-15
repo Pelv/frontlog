@@ -25,7 +25,7 @@ This library works without dependencies and can be used without init or stuff...
 
 #### **Install**
 ```shell
-npm install frontlog
+npm install @pelv/frontlog
 ```
 or add the `index.js` file in your project and import it where you need it
 
@@ -33,7 +33,7 @@ or add the `index.js` file in your project and import it where you need it
 #### **Usage**
 First, you'll need to import it in your file/components etc:
 ```javascript
-import log from 'frontlog'
+import log from '@pelv/frontlog'
 ```
 then just use `log({...params}, {...overrideOnce})`.
 Examples:
