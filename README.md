@@ -134,3 +134,8 @@ If is a string it will just send a normal console.log, If is an array will consi
 - **tag**: String -> identifier of different console.logs; usually used to tag/categorize console.logs
 - **group**: Array of objects -> similar to send an array of logs object but will be displayed in a console.group
 - **groupName**: String -> the message/name used for the group. If no name is specified, the `tag` string will be used as a name (this tag property should be at the same level of group)
+
+## Outro
+That's all folks! :)
+Please feel free to fork, request improvements, stars and whatever.
+If you have any questions, find me on any social and messaging App (search for Pelv or Pelviero).
