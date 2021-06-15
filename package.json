@@ -1,0 +1,22 @@
+{
+  "name": "frontlog",
+  "version": "1.0.0",
+  "description": "Simple yet complex styled console.log library. Just vanilla JS, no dependencies.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pelv/frontlog.git"
+  },
+  "keywords": [
+    "javascript",
+    "console-log",
+    "logging",
+    "javascript-library"
+  ],
+  "author": "Pelv",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Pelv/frontlog/issues"
+  },
+  "homepage": "https://github.com/Pelv/frontlog#readme"
+}
