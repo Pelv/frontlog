@@ -5,23 +5,27 @@ Simple yet complex styled console.logs library. Just vanilla JS, no dependencies
 This library has been created for front-end devs and works smootly with the inspector.
 The other libraries i found online have too many features and most of them are made to be used with node.js. Instead, i wanted a library easy-to-use and easy-to-write that helps out front-end team chatch only the needed console.log at the right time.
 When a lot of people works on an application (i.e. a React App) there can be a lot of console.logs that comes from other components that doesn't help you debug.
-<br><br>
+
+
 #### **Features**:
 - Tags for console.log (aka prefefix) to easly chatch where the log is coming from or to search / filter them;
 - Multiple logs in one call;
 - Easy to write console groups;
 - Console types (ok, error, warn, info);
 - General config, such as: tags filtering (allow only some tags), deactive console logs (for production servers), console.group collapse when tot logs has to be sent.
-<br><br>
+
+
 ## How to use
 This library works without dependecies and can be used without init or stuff... It just works right out of the box
-<br><br>
+
+
 #### **Install**
 ```shell
 npm install frontlog
 ```
 or add the `index.js` file in your project and import it where you need it
-<br><br>
+
+
 #### **Usage**
 First, you'll need to import it in your file/components ecc:
 ```javascript
@@ -83,9 +87,10 @@ log({
 Those example produce the following output:
 ![Examples output!](/images/examples.png)
 
-<br><br>
+
 "Ok now... that looks a bit messy" :) don't worry, find below a more informations.
-<br><br>
+
+
 ## Global config and log parameters
 Let's start with the library global config:
 ```javascript
@@ -135,7 +140,9 @@ If is a string it will just send a normal console.log, If is an array will consi
 - **group**: Array of objects -> similar to send an array of logs object but will be displayed in a console.group
 - **groupName**: String -> the message/name used for the group. If no name is specified, the `tag` string will be used as a name (this tag property should be at the same level of group)
 
+
 ## Outro
 That's all folks! :)
 Please feel free to fork, request improvements, stars or whatever.
+
 If you have any questions, find me on any social and messaging App (search for Pelv or Pelviero).
