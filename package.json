@@ -1,5 +1,5 @@
 {
-  "name": "frontlog",
+  "name": "@pelv/frontlog",
   "version": "1.0.1",
   "description": "Simple yet complex styled console.log library. Just vanilla JS, no dependencies.",
   "main": "index.js",
