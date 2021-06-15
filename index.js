@@ -9,7 +9,7 @@ const errorColor = 'background-color: #d21003; color: #fdecea; font-weight: 500;
 // Library default and initial configuration. Use the 'changeConfig' method
 const config = {
   sendLogs: true, // boolean variable that specify if the library should send console.logs or not
-  tagsToShow: [], // leave empy to allow all tags to be shown, array of tags that have to be printed
+  tagsToShow: [], // leave empty to allow all tags to be shown, array of tags that have to be printed
   collapseGroupLogs: 2 // specify after how many log a group should be collapsed
 }
 
@@ -30,14 +30,14 @@ export const changeLogConfig = ({ sendLogs = null, tagsToShow = null }) => {
  * MAIN LOGGING FUNCTION
  * @param {*} params string, object or array of objects
  * - when params is a string a classic console.log will be printed
- * - when params is an array of ojects multiple console.logs made with simplog will be printed
- * - when params is an object (dafult usage) it will accept the following variables
+ * - when params is an array of objects multiple console.logs made with frontlog will be printed
+ * - when params is an object (default usage) it will accept the following variables
  *   - text: is the message that will be displayed
  *   - variable: the variable to be printed
  *   - variables: array of variables to be printed
  *   - tag: the tag of the console.log (prefix)
  *   - type: the type of console log; it's support info, warn, error, ok
- *   - group: array of console.logs that will be printed in a gruop
+ *   - group: array of console.logs that will be printed in a group
  *   - groupName: optional name for the group of console.log
  * @param {*} overrideOnce config object
  * optional object that enables you to override the saved config (it has the same structure)
