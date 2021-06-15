@@ -49,7 +49,7 @@ const log = async (params, overrideOnce) => {
   // check if i should send console.logs
   if (config.sendLogs || (overrideOnce && overrideOnce.sendLogs)) {
     if (!params) {
-      // empy params, send empy log
+      // empty params, send empty log
       console.log()
     } else if (typeof params === 'string') {
       // params is just a string, send a classic console log
@@ -97,7 +97,7 @@ const log = async (params, overrideOnce) => {
           const thisColors = !type ? null : type === 'ok' ? okColor : type === 'info' ? infoColor : type === 'warn' ? warnColor : type === 'error' ? errorColor : null
           const thisVariable = Object.keys(params).indexOf('variable') > -1 ? variable : ''
           const variablesArray = Object.keys(params).indexOf('variables') > -1 ? [...variables] : [thisVariable]
-          // check whatever is a colored console or not
+          // check whatever is a coloured console or not
           if (thisColors) {
             variablesArray.forEach(variable => {
               console.log(
