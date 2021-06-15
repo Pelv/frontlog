@@ -1,6 +1,10 @@
 # **frontlog**
 Simple yet complex styled console.logs library. Just vanilla JS, no dependencies.
 
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/pelv/frontlog?logo=git&style=for-the-badge)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/pelv/frontlog?logo=npm&style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/pelv/frontlog?logo=github&style=for-the-badge)
+
 ## Introduction
 This library has been created for front-end devs and works smoothly with the inspector.
 The other libraries i found online have too many features and most of them are made to be used with node.js. Instead, i wanted a library easy-to-use and easy-to-write that helps out front-end team catch only the needed console.log at the right time.
