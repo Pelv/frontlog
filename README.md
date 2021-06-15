@@ -2,7 +2,6 @@
 Simple yet complex styled console.logs library. Just vanilla JS, no dependencies.
 
 ## Introduction
-________________________
 This library has been created for front-end devs and works smootly with the inspector.
 The other libraries i found online have too many features and most of them are made to be used with node.js. Instead, i wanted a library easy-to-use and easy-to-write that helps out front-end team chatch only the needed console.log at the right time.
 When a lot of people works on an application (i.e. a React App) there can be a lot of console.logs that comes from other components that doesn't help you debug.
@@ -15,7 +14,6 @@ When a lot of people works on an application (i.e. a React App) there can be a l
 - General config, such as: tags filtering (allow only some tags), deactive console logs (for production servers), console.group collapse when tot logs has to be sent.
 <br><br>
 ## How to use
-________________________
 This library works without dependecies and can be used without init or stuff... It just works right out of the box
 <br><br>
 #### **Install**
@@ -88,7 +86,7 @@ Those example produce the following results:
 <br><br>
 "Ok now... that looks a bit messy" :) don't worry, find below a more informations.
 <br><br>
-#### **Global config and log parameters**
+## Global config and log parameters
 Let's start with the library global config:
 ```javascript
 // default config
