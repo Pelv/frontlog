@@ -44,7 +44,7 @@ log({
   tag: 'example'
 })
 
-// mulpitle log for multiple variables? No problem!
+// multiple log for multiple variables? No problem!
 log({
   text: 'this is the message, it will be the same for every variable',
   variables: [myExampleVar1, myExampleVar2],
@@ -115,7 +115,7 @@ if (configuration.environment === 'production') {
   })
 }
 ```
-If you want to change it just for one log you can use ***optional*** parameter `overrideOnce`: it accept the same variables of config and can be used to change the global settings just for that log.
+If you want to change it just for one log you can use ***optional*** parameter `overrideOnce`: it accept the same config variables and can be used to change the global settings just for that log.
 I.E. let's say you want a log that will be always sent even in production, you can write the log as follow:
 ```javascript
 log(
