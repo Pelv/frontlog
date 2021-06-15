@@ -123,5 +123,4 @@ const log = async (params, overrideOnce) => {
     }
   }
 }
-// export default log
-module.exports = log
+export default log
