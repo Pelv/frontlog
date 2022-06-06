@@ -47,7 +47,6 @@ export const changeLogConfig = ({ sendLogs = null, tagsToShow = null }) => {
  * N.B. tagsToShow can't be edited once
  */
 const log = async (params, overrideOnce) => {
-  console.log('config =>', config)
   // check if i should send console.logs
   if (config.sendLogs || (overrideOnce && overrideOnce.sendLogs)) {
     if (!params) {
