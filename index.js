@@ -7,7 +7,7 @@ const warnColor = 'background-color: #ffcc10; color: #462900; font-weight: 500;'
 const errorColor = 'background-color: #d21003; color: #fdecea; font-weight: 500;'
 
 // Library default and initial configuration. Use the 'changeConfig' method
-const config = {
+export const config = {
   sendLogs: true, // boolean variable that specify if the library should send console.logs or not
   tagsToShow: [], // leave empty to allow all tags to be shown, array of tags that have to be printed
   collapseGroupLogs: 2 // specify after how many log a group should be collapsed
@@ -19,9 +19,10 @@ const config = {
  * it accepts the config variables
  */
 export const changeLogConfig = ({ sendLogs = null, tagsToShow = null }) => {
-  config.sendLogs = sendLogs && sendLogs !== config.sendLogs ? sendLogs : config.sendLogs
-  config.tagsToShow = tagsToShow && Array.isArray(tagsToShow) ? tagsToShow : config.tagsToShow
-  if (!sendLogs) {
+  if (sendLogs != null) config.sendLogs = sendLogs
+  if (tagsToShow) config.tagsToShow = tagsToShow && Array.isArray(tagsToShow) ? tagsToShow : config.tagsToShow
+  // if sendLogs is false, send a log
+  if (sendLogs === false) {
     console.log('No logs will be sent. Best of luck :)')
   }
 }
@@ -46,6 +47,7 @@ export const changeLogConfig = ({ sendLogs = null, tagsToShow = null }) => {
  * N.B. tagsToShow can't be edited once
  */
 const log = async (params, overrideOnce) => {
+  console.log('config =>', config)
   // check if i should send console.logs
   if (config.sendLogs || (overrideOnce && overrideOnce.sendLogs)) {
     if (!params) {
