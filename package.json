@@ -6,7 +6,7 @@
   "license": "MIT",
   "main": "./index.js",
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=16.0.0"
   },
   "scripts": {
     "prepublish": "npm run your-build-script",
