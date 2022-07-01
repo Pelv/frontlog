@@ -4,13 +4,20 @@
   "description": "Simple yet complex styled console.log library. Just vanilla JS, no dependencies.",
   "author": "Pelv",
   "license": "MIT",
-  "main": "./index.js",
+  "main": "build/index.js",
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=14.0.0"
   },
   "scripts": {
-    "prepublish": "npm run your-build-script",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./src",
+    "build": "npm run lint && babel ./src -d ./lib",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^8.18.0"
   },
   "repository": {
     "type": "git",
