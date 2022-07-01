@@ -5,6 +5,12 @@ Simple yet complex styled console.logs library. Just vanilla JS, no dependencies
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/pelv/frontlog?logo=npm&style=for-the-badge)
 ![GitHub](https://img.shields.io/github/license/pelv/frontlog?logo=github&style=for-the-badge)
 
+
+## v2
+- Optimized npm package and repo
+- Added tagColor on the config
+- General optimizations
+
 ## Introduction
 This library has been created for front-end devs and works smoothly with the inspector.
 The other libraries i found online have too many features and most of them are made to be used with node.js. Instead, i wanted a library easy-to-use and easy-to-write that helps out front-end team catch only the needed console.log at the right time.
@@ -35,7 +41,7 @@ First, you'll need to import it in your file/components etc:
 ```javascript
 import log from '@pelv/frontlog'
 ```
-then just use `log({...params}, {...overrideOnce})`.
+then just use `log({...params}, {...overrideConfigOnce})`.
 Examples:
 ```javascript
 // just the most basic usage, for fast logs
@@ -100,11 +106,13 @@ Let's start with the library global config:
 ```javascript
 // default config
 const config = {
+  tagColor: 'default',
   sendLogs: true,
   tagsToShow: [],
-  collapseGroupLogs: 2 // specify after how many log a group should be collapsed
+  collapseGroupLogs: 2
 }
 ```
+- **tagColor**: string variable that specify which color scheme to use for tags, it accepts: 'red', 'yellow', 'blue', 'green'.
 - **sendLogs**: boolean variable that specify if the library should send console.logs or not. Set false for production builds and no console logs will be delivered!
 - **tagsToShow**: array of strings containing the Tags that are allowed to be printed. Leave empty to allow all tags.
 - **collapseGroupLogs**: number that specify after how many logs the group should be collapsed by default
@@ -119,7 +127,7 @@ if (configuration.environment === 'production') {
   })
 }
 ```
-If you want to change it just for one log you can use ***optional*** parameter `overrideOnce`: it accept the same config variables and can be used to change the global settings just for that log.
+If you want to change it just for one log you can use ***optional*** parameter `overrideConfigOnce`: it accept the same config variables and can be used to change the global settings just for that log.
 I.E. let's say you want a log that will be always sent even in production, you can write the log as follow:
 ```javascript
 log(
@@ -135,9 +143,9 @@ log(
 
 Let's talk about the basic parameters of the log function. As mentioned in the example, the main parameters of the `log` function can be a String, an Array or an Object.
 
-If is a string it will just send a normal console.log, If is an array will consider it as multiple logs if contains objects and the object is the default usage and can accept the following property (those are the same if you send an array of objects):
+If is a string it will just send a normal console.log. If is an array will consider it as multiple log objects; If is an object (default usage) can accept the following property (same if you send an array of objects):
 - **text**: String -> the message of the console.log
-- **type**: String -> it accept `ok`, `warn`, `error`, `info` and will add a prefix after the tag with the color of the type; N.B. the library doesn't use console.warn and console.error.
+- **type**: String -> it accept `success`, `warn`, `error`, `info` and will add a prefix after the tag with the color of the type; N.B. the library doesn't use console.warn and console.error.
 - **variable**: Any -> the variable you want to attach to the console.log
 - **variables**: Array -> an array of variables you want to log
 - **tag**: String -> identifier of different console.logs; usually used to tag/categorise console.logs
