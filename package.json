@@ -2,19 +2,49 @@
   "name": "@pelv/frontlog",
   "version": "1.0.5",
   "description": "Simple yet complex styled console.log library. Just vanilla JS, no dependencies.",
-  "main": "index.js",
+  "author": "Pelv",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "files": [
+    "lib/**/*"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "lint": "eslint ./src",
+    "clean": "rm -rf ./lib",
+    "build": "npm run clean && npm run lint && babel ./src -d ./lib",
+    "build:publish": "npm run lint && npm run build",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build:publish",
+    "release": "np"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.6",
+    "@babel/core": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
+    "babel-plugin-add-module-exports": "^1.0.4",
+    "eslint": "^8.18.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "np": "^7.6.2"
+  },
+  "np": {
+    "yarn": false,
+    "tests": false
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Pelv/frontlog.git"
   },
   "keywords": [
     "javascript",
-    "console-log",
+    "console",
+    "log",
     "logging",
     "javascript-library"
   ],
-  "author": "Pelv",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Pelv/frontlog/issues"
   },
