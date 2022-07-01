@@ -30,10 +30,6 @@
     "eslint-plugin-node": "^11.1.0",
     "np": "^7.6.2"
   },
-  "np": {
-    "yarn": false,
-    "tests": false
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Pelv/frontlog.git"
