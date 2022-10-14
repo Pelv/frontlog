@@ -124,8 +124,12 @@ const log = (params = null, overrideConfigOnce = null) => {
       // empty params, send empty log
       console.log('Empty params passed to frontlog. Are you sure you want this?')
     } else if (typeof params === 'string') {
-      // params is just a string, send a classic console log
-      console.log(params)
+      // params is just a string, send a classic console log with eventual secondo parameter
+      if (overrideConfigOnce) {
+        console.log(params, overrideConfigOnce)
+      } else {
+        console.log(params)
+      }
     } else if (Array.isArray(params)) {
       // array of console logs to be sent
       params.forEach(param => log(param))
