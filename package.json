@@ -1,6 +1,6 @@
 {
   "name": "@pelv/frontlog",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Simple yet complex styled console.log library. Just vanilla JS, no dependencies.",
   "author": "Pelv",
   "license": "MIT",
